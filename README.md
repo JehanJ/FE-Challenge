@@ -2,6 +2,7 @@
  Code for Project Square dev challenge
  
 /* To get this file up and running: */
+
 Step 1: click on "code <>" button and then select "download zip"
 Step 2: extract files to chosen folder e.g. desktop
 Step 3: Open the extracted folder and find fe-test-app
