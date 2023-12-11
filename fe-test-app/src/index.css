@@ -1,0 +1,456 @@
+/*
+=============== 
+Variables
+===============
+*/
+:root {
+  --primary-hover: #9939d0;
+  --primary-main: #70259b;
+  --primary-dark: #430964;
+  --primary-active: #d100c9;
+  --black: #000000;
+  --dark-grey: #242424;
+  --grey: #363636;
+  --white: #ffffff;
+}
+
+/*
+=============== 
+Global Styles
+===============
+*/
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: system-ui, -apple-system, 'Inter', sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+  color: var(--black);
+  font-weight: 400;
+}
+main {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0 0;
+}
+.container.is-fluid {
+  padding-left: 0;
+  padding-right: 0;
+  max-width: 1920px !important;
+}
+
+/*Font sizes & Adjustments*/
+.is-size-1-desktop {
+  font-weight: 700;
+  line-height: 4.2rem;
+  color: var(--dark-grey);
+  letter-spacing: 0em;
+}
+.is-size-2-desktop {
+  font-weight: 700;
+  line-height: 3.5rem;
+  letter-spacing: 0em;
+}
+.is-size-3-desktop {
+  font-weight: 400;
+  line-height: 2.4rem;
+  letter-spacing: 0em;
+}
+.is-size-4-desktop {
+  font-weight: 400;
+  line-height: 1.8rem;
+  letter-spacing: 0em;
+}
+.subtitle {
+  line-height: 1.875rem;
+  max-width: 570px;
+}
+
+/*Font Media Queries*/
+@media screen and (max-width: 1023px) {
+  body {
+    font-size: 1rem;
+  }
+  .is-size-1-desktop {
+    line-height: 1.875rem;
+    font-weight: 600;
+  }
+  .is-size-2-desktop {
+    line-height: 1.5rem;
+    font-weight: 600;
+  }
+  .is-size-4-desktop {
+    line-height: 1.5rem;
+  }
+  .subtitle {
+    line-height: 1.875rem;
+    max-width: 570px;
+  }
+}
+/*Padding*/
+.pad-A {
+  padding: 3.75rem 5rem;
+}
+.pad-LR {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+.pad-T {
+  padding-top: 3.75rem;
+}
+.pad-B {
+  padding-bottom: 3.75rem;
+}
+.pad-0 {
+  padding: 0px !important;
+}
+.pad-H {
+  margin-bottom: 1.5rem;
+}
+/*Padding Media Queries*/
+@media screen and (max-width: 1023px) {
+  .pad-A {
+    padding: 1.5rem;
+  }
+  .pad-LR {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .pad-T {
+    padding-top: 1.5rem;
+  }
+  .pad-B {
+    padding-bottom: 0;
+  }
+  .pad-m {
+    padding: 0;
+  }
+}
+
+/*Link & Footer Link Styling*/
+a {
+  color: var(--primary-hover);
+}
+a:hover {
+  color: var(--primary-main);
+  text-decoration: underline;
+}
+a:active {
+  color: var(--primary-active);
+}
+a:focus {
+  color: var(--primary-active);
+}
+footer a {
+  text-decoration: none;
+  color: var(--white);
+}
+footer a:hover {
+  text-decoration: underline;
+  color: var(--white);
+}
+/*Tag Styling*/
+.tag:not(body) {
+  padding-left: 0;
+  padding-right: 0;
+}
+.tag-text-is-black {
+  color: var(--black) !important;
+}
+.rectangleIcon {
+  padding-left: 20px;
+}
+
+/*Button Styles & Adjustments*/
+.button.is-primary {
+  background-color: var(--primary-main);
+  border-color: transparent;
+  color: var(--white);
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.3125rem;
+}
+.button.is-primary:hover {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+  border-color: transparent;
+}
+.button.is-primary:active {
+  background-color: var(--primary-active);
+  border-color: var(--primary-active);
+  border-color: transparent;
+}
+
+.button.is-inverted {
+  padding: 0.625rem 1.25rem;
+  background-color: var(--white);
+  color: var(--primary-main);
+  border-color: transparent;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.3125rem;
+}
+.button.is-inverted:hover {
+  background-color: var(--primary-hover);
+  color: var(--white);
+  text-decoration: none;
+}
+.button.is-inverted:active {
+  background-color: var(--primary-active);
+  color: var(--white);
+}
+
+/*Button Media Queries*/
+@media screen and (max-width: 1023px) {
+  .button.is-primary {
+    background-color: var(--white);
+    color: var(--primary-main);
+  }
+  .button.is-primary:hover {
+    background-color: var(--primary-hover);
+    color: var(--white);
+  }
+  .button.is-primary:active {
+    background-color: var(--primary-active) t;
+    color: var(--white);
+  }
+
+  .button.is-inverted {
+    background-color: var(--primary-main);
+    color: var(--white);
+  }
+  .button.is-inverted:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+  }
+  .button.is-inverted:active {
+    background-color: var(--primary-active);
+    border-color: var(--primary-active);
+  }
+}
+
+/*
+=============== 
+NavBar
+===============
+*/
+header {
+  width: 100%;
+  margin: 0 auto;
+  background: var(--primary-main);
+}
+.navbar {
+  background-color: var(--primary-main);
+}
+.navbar.center-menu {
+  .navbar-start {
+    flex-grow: 1;
+    justify-content: center;
+  }
+}
+.navbar-burger span {
+  color: var(--grey);
+}
+.navbar-item a {
+  color: var(--white);
+  font-size: 0.875rem !important;
+  line-height: 1.3125rem !important;
+  font-weight: 700;
+  letter-spacing: 0em;
+}
+a.navbar-item:hover {
+  color: var(--primary-hover);
+}
+a.navbar-item:active {
+  color: var(--primary-active);
+}
+a.navbar-item:focus {
+  color: var(--primary-hover);
+}
+
+/*Navbar Mobile Media Queries*/
+@media screen and (max-width: 1023px) {
+  .navbar {
+    background-color: var(--white);
+  }
+  .navbar-menu {
+    box-shadow: none;
+  }
+  #logoColor {
+    filter: invert(43%) sepia(48%) saturate(3687%) hue-rotate(266deg) brightness(51%) contrast(113%);
+  }
+  .navbar-item a {
+    color: var(--grey-dark);
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 1.25rem;
+  }
+}
+
+/*
+=============== 
+Hero
+===============
+*/
+.hero {
+  position: relative;
+  background: var(--primary-main);
+}
+.hero.is-info {
+  background-color: var(--primary-dark);
+}
+.hero-body {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-left: 5rem;
+  padding-bottom: 5rem;
+  background: transparent;
+}
+
+/*Hero Component Queries*/
+@media screen and (max-width: 1023px) {
+  .hero {
+    position: static;
+  }
+
+  .hero-body {
+    position: static;
+    padding-left: 1.5rem;
+    padding-top: 1.875rem;
+    padding-bottom: 1.875rem;
+    background: var(--primary-dark);
+  }
+}
+
+/*
+=============== 
+What We Do - Columns
+===============
+*/
+.col-hh {
+  height: 8rem;
+  margin-bottom: 2rem;
+  padding-top: 3rem;
+}
+.pad-icon {
+  padding-top: 1.5rem;
+}
+
+/*4 Column Media Queries*/
+@media screen and (max-width: 1023px) {
+  .col-hh {
+    height: 4rem;
+    padding-top: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+  .pad-icon {
+    padding-top: 1.5rem;
+  }
+}
+
+/*
+=============== 
+Case Studies - Cards
+===============
+*/
+.slick-slider {
+  width: 100%;
+  max-width: 1920px;
+}
+.slick-prev {
+  left: 3.125rem;
+  z-index: 1;
+}
+.slick-next {
+  right: 3.125rem;
+  z-index: 1;
+}
+button.slick-prev::before,
+button.slick-next::before {
+  color: var(--white) !important;
+}
+button.slick-prev:hover::before,
+button.slick-next:hover:before {
+  color: var(--primary-hover) !important;
+}
+.card {
+  position: relative;
+  box-shadow: 0px 8px 16px 0px #3636361a;
+}
+
+.card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.pad-Cp {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+/*Card Media Queries*/
+@media screen and (max-width: 1023px) {
+  .card-content {
+    padding: 1rem;
+  }
+  .slick-prev {
+    left: 2.5rem;
+  }
+  .slick-next {
+    right: 2.5rem;
+  }
+}
+/*
+=============== 
+Good Company - Brands - Tiles
+===============
+*/
+.image.brand-img {
+  width: 120px;
+  height: 80px;
+}
+.image img {
+  width: auto;
+}
+.GC-img {
+  min-width: 66px;
+  max-width: 130px;
+  max-height: 100px;
+}
+/*Tile Image Media Queries*/
+@media screen and (max-width: 768px) {
+  .image.brand-img {
+    width: 100%;
+    height: 40px;
+  }
+  .GC-img {
+    min-width: auto;
+    max-width: 80px;
+    max-height: 40px;
+  }
+}
+/*
+=============== 
+Footer
+===============
+*/
+footer {
+  width: 100%;
+  margin: 0 auto;
+}
+footer,
+footer .tag {
+  background: var(--primary-dark);
+  color: #fff;
+}
+.footer-info {
+  text-align: left;
+}
+/*Footer Media Queries*/
+@media screen and (max-width: 768px) {
+  .footer-info {
+    text-align: center;
+  }
+}
